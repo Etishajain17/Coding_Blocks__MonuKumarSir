@@ -1,7 +1,8 @@
 package Day2;
 /*
 From base 5 to base 10
-div by destination base and multiply by source base.
+div by destination base and multiply by source base.(one base should be 10 for this formula)
+so convert anyone to 10 if in case like 5 to 7
  */
 import java.util.Scanner;
 

@@ -11,7 +11,7 @@ public class FahrenheitToCelsius {
         for(int i=min;i<=max;i+=step)
         {
             int c=(int)((5.0/9)*(i-32));
-            System.out.println(i+" "+c);
+            System.out.println(i+"\t"+c);
         }
     }
 }

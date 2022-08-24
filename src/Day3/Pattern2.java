@@ -1,7 +1,6 @@
 package Day3;
 
 import java.util.Scanner;
-
 /*
                             1
                         2 1   1 2

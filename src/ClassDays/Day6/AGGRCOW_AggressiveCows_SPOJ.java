@@ -1,4 +1,4 @@
-package Day6;
+package ClassDays.Day6;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -13,7 +13,7 @@ public class AGGRCOW_AggressiveCows_SPOJ {
                 cow++;
                 pos = stalls[i];
             }
-            if(cow==mid)
+            if(cow==noc)
                 return true;
             i++;
         }

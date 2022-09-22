@@ -31,8 +31,60 @@ Sample Input
 Sample Output
     10
  */
+import java.util.*;
 public class PaintersPartitionProblem {
-    public static void main(String[] args) {
-        System.out.println();
+    public static boolean isItPossible(int[] board, int nop, int mid) {
+        int painter=1;
+        int board_paint=0;
+        int i=0;
+        while(i<board.length) {
+            if(board_paint+board[i]<=mid) {
+                board_paint+=board[i];
+                i++;
+            }
+            else {
+                painter++;
+                board_paint=0;
+
+            }
+            if(painter>nop) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public  static int  partitionPainter(int[] board, int nop) {
+        int low=0;
+        int high=0;
+        int ans=0;
+        for(int val :board) {
+            high+=val;
+        }
+        while(low<=high) {
+            int mid = (low+high)/2;
+            if(isItPossible(board,nop,mid)) {
+                ans=mid;
+                high=mid-1;
+            }
+            else {
+                low=mid+1;
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        int nop = sc.nextInt();
+        int nob = sc.nextInt();
+
+        int[] board = new int[nob];
+        for (int i = 0; i < board.length; i++) {
+            board[i] = sc.nextInt();
+        }
+
+        System.out.println(partitionPainter(board, nop));
     }
 }

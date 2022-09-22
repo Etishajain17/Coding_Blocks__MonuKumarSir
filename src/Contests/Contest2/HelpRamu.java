@@ -55,8 +55,39 @@ Explanation
     Total final cost = min( totalCabCost + totalRickshawCost , c4) = min( 5 + 7, 19) = min ( 12, 19) = 12
     We print 12.
  */
+import java.util.*;
 public class HelpRamu {
-    public static void main(String[] args) {
-        System.out.println();
+    public static int minCost(int c1,int c2,int c3,int c4,int[] a,int[] b){
+        int cost2=0,cost3=0,cost4=0,i=0;
+        for(;i<a.length;i++)
+            cost2+=Math.min(a[i]*c1,c2);
+        cost3=Math.min(cost2,c3);
+        cost2=0;
+        for(i=0;i<b.length;i++)
+            cost2+=Math.min(b[i]*c1,c2);
+        cost3+=Math.min(cost2,c3);
+        cost4=Math.min(cost3,c4);
+        return cost4;
+
+    }
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t-->0){
+            int c1=sc.nextInt();
+            int c2=sc.nextInt();
+            int c3=sc.nextInt();
+            int c4=sc.nextInt();
+            int m=sc.nextInt();
+            int n=sc.nextInt();
+            int[] a =new int[m];
+            int[] b =new int[n];
+            for(int i=0;i<m;i++)
+                a[i]=sc.nextInt();
+            for(int i=0;i<n;i++)
+                b[i]=sc.nextInt();
+            int cost=minCost(c1,c2,c3,c4,a,b);
+            System.out.println(cost);
+        }
     }
 }

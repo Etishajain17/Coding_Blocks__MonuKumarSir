@@ -4,7 +4,7 @@ import java.util.Scanner;
 /*
 One of the important aspect of object oriented programming is readability of the code. To enhance the readability of code,
 developers write function and variable names in Camel Case. You are given a string, S, written in Camel Case.
-FindAllTheWordsContainedInIt.
+ie y.
 
 Input Format
     A single line contains the string.
@@ -39,6 +39,6 @@ public class CanYouReadThis {
                 j=i;
             }
         }
-        System.out.println(s.substring(j,s.length()));
+        System.out.println(s.substring(j));
     }
 }

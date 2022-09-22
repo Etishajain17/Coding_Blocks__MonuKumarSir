@@ -1,4 +1,4 @@
-package Contests.Contest1;
+package Contests.Contest1_Basics_Patterns;
 /*
 Take N as input. For a value of N=7, we wish to draw the following pattern :
 

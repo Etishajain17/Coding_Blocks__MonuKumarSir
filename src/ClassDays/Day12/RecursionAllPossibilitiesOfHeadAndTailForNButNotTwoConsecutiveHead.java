@@ -1,7 +1,7 @@
 package ClassDays.Day12;
 
 /*
-n=3 (HHH(NO),HHT(NO),HTH,HTT,THH(NO),THT,TTH,TTT)
+n=3(HHH(NO),HHT(NO),HTH,HTT,THH(NO),THT,TTH,TTT)
 
 
                            (ques),(ans)

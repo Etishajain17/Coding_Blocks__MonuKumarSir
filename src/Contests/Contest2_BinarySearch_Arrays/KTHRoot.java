@@ -1,4 +1,4 @@
-package Contests.Contest2;
+package Contests.Contest2_BinarySearch_Arrays;
 
 import java.util.Scanner;
 

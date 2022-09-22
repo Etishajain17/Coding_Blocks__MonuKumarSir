@@ -1,4 +1,4 @@
-package Contests.Contest2;
+package Contests.Contest2_BinarySearch_Arrays;
 
 import java.util.*;
 /*
@@ -55,7 +55,7 @@ Explanation
     Total final cost = min( totalCabCost + totalRickshawCost , c4) = min( 5 + 7, 19) = min ( 12, 19) = 12
     We print 12.
  */
-import java.util.*;
+
 public class HelpRamu {
     public static int minCost(int c1,int c2,int c3,int c4,int[] a,int[] b){
         int cost2=0,cost3=0,cost4=0,i=0;

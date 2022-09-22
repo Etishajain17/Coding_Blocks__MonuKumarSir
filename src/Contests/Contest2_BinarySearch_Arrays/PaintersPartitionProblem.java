@@ -1,4 +1,4 @@
-package Contests.Contest2;
+package Contests.Contest2_BinarySearch_Arrays;
 
 import java.util.*;
 /*
@@ -31,7 +31,7 @@ Sample Input
 Sample Output
     10
  */
-import java.util.*;
+
 public class PaintersPartitionProblem {
     public static boolean isItPossible(int[] board, int nop, int mid) {
         int painter=1;

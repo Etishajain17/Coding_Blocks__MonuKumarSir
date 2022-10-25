@@ -1,4 +1,4 @@
-package Contests.Contest3;
+package Contests.Contest3_Strings_SlidingWindow;
 
 import java.util.*;
 /*

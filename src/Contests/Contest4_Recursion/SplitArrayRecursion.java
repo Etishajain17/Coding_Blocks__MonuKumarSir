@@ -1,6 +1,6 @@
 package Contests.Contest4_Recursion;
 
-import java.util.Scanner;
+import java.util.*;
 
 /*
 Take as input N, a number. Take N more inputs and store that in an array.
@@ -41,31 +41,50 @@ Sample Output
     6
  */
 public class SplitArrayRecursion {
-    public static void printSplit(int[] arr,int j,int sum1,int sum2){
-        if(j==arr.length)
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] ar=new int[n];
+        int s=0;
+        for(int i=0;i<n;i++){
+            ar[i]=sc.nextInt();
+            s+=ar[i];
+        }
+        if(s%2!=0){
+            System.out.println(0);
             return;
-        if(sum1!=0 && sum1==sum2){
-            for(int i=0;i<j+1;i++)
-                System.out.print(arr[i]+" ");
-            System.out.print("and");
-            for (int i = j+1; i < arr.length; i++) {
-                System.out.print(" "+arr[i]);
+        }
+        List<Set<Integer>> list=new ArrayList<>();
+        Set<Integer> hs=new HashSet<>();
+        split(ar,0,s,0,hs,list);
+        display(list,ar,n);
+    }
+
+    private static void split(int[] ar,int i,int sum,int curr,Set<Integer> set,List<Set<Integer>> list){
+        if(curr==sum/2) {
+            list.add(new HashSet<>(set));
+            return;
+        }
+        if(i==ar.length)
+            return;
+        set.add(i);
+        split(ar,i+1,sum,curr+ar[i],set,list);
+        set.remove(i);
+        split(ar,i+1,sum,curr,set,list);
+    }
+    public static void display(List<Set<Integer>> list,int[] ar,int n){
+        for(Set<Integer> ans:list){
+            for(int i:ans){
+                System.out.print(ar[i]+" ");
+            }
+            System.out.print("and ");
+            for(int i=0;i<n;i++){
+                if(!ans.contains(i)){
+                    System.out.print(ar[i]+" ");
+                }
             }
             System.out.println();
         }
-        int val=arr[j];
-        printSplit(arr,j+1,sum1+val,sum2);
-        printSplit(arr,j+1,sum1,sum2+val);
-    }
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        int[] arr=new int[n];
-        int sum=0;
-        for (int i = 0; i < n; i++) {
-            arr[i]=sc.nextInt();
-            sum+=arr[i];
-        }
-        printSplit(arr,0,0,0);
+        System.out.println(list.size());
     }
 }

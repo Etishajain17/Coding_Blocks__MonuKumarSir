@@ -85,7 +85,7 @@ worst case= n^2;
 
 best case of insertion sort=n (when array sorted that time inner loop will not run)
 
-Based on swapping selection sort is best becoz n-1 swaps
+Based on swapping, selection sort is best becoz n-1 swaps
 Optimization of bubble sort --> if inner loop is not acting any swap then we can break the outer loop.
 
 Merge sort nlogn in all three best,worst,avg

@@ -44,7 +44,7 @@ public class NextPermutationLeetCode {
 
     }
     public static void main(String[] args) {
-        int[] arr={1,2,3};
+        int[] arr={1,2,2,3,2,3};
         Next_Permutation(arr);
         for (int i:arr) {
             System.out.print(i+" ");

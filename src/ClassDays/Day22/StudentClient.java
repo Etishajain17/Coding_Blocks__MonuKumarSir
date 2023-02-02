@@ -8,14 +8,14 @@ compiler --> sees first LHS
 
  */
 
-public --> anywhere
-private --> within same class
-default --> within same package
-protected --> within same package but also in subclass of different package
-public class StudentClient {
-    public static void main(String[] args) {
+class StudentClient{
+    public static void main(String[] args) throws Exception{
         System.out.println("Hey");
         Student s=new Student("Etisha",19);
+//        System.out.println(s.name);
+//        s.setAge(-90);                  //gnerate exception
+//        s.setAge(90);
+        System.out.println(s.getAge());
 
     }
 }

@@ -17,6 +17,17 @@ java Test
 in bin folder see .class files which has all microprocessor code for code to run
 
 Class --> blueprint of functionalities and operations
+
+public --> anywhere
+private --> within same class
+default --> within same package
+protected --> within same package but also in subclass of different package
+
+without inheritance
+- public --> everywhere
+- private --> within class in which it is made
+- default --> within package
+- protected --> within package
  */
 public class OOps {
     public static void main(String[] args) {

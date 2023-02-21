@@ -1,0 +1,59 @@
+In Heap --> BluePrint load
+
+    Obj o=new Obj();
+- Memory allocation
+- Data Parsing(default rakhne ke and static variable)
+- Constructor(modify krne ke liye)
+
+class load --> static
+static -- property of class
+instance -- property of object
+
+data members based on address --> LHS --> Parent
+function based on object --> RHS --> Child
+
+Data member change affect functionalities
+Agar vo change krna hota too super.x but agr nhi krna too isliye usne new bnaya h
+
+Function may or may not affect functionalities
+And we need to override it so this behaviour.
+
+Bubble sort , Insertions sort --> best O(n) , worst O(n^2)
+When last three are not sorted only best of bubble and insertion fails there
+
+insertion + merge || insertion + quick --> java
+bubble + quick/merge --> c++
+
+primitive --> quick , non-primitive --> merge
+order of insertion matters --> stability
+Quick sort is not stable  that is why merge sort came
+
+stability: A - 50 , B- 100 , C-60 , D-100 , E-50 --> B-100 , D- 100 , C-60 , A-50 , E-50
+
+Arrays.sort --> tim sort --> insertion + merge
+whenevr range then use counting sort
+
+Java is platform independent.
+
+JIT --> Just in time and ahead in time complition
+
+Interfaces-->> implementations and specifications and prototypes
+
+abstract --> no implementation
+
+implements , extends -->> inheritance
+implement --> inherit + give body to abstract methods
+extend --> inherit
+
+class extends class,interface extends interface , class extends interface
+interface don't provide implementation so always interface extends another interface
+
+class can inherit multiple interface and interface can inherit mulitiple interface
+static, final--> data member in interface
+<> --> limits,restrictions,bounds
+T aise T h jo comparable h aur compareto function
+T extends because only inheritance needed as T can be class/interface
+
+A-B <=> A.compareTo(B)
+A-B>0  -> A greater ->A.compareTo(B)
+A-B<0  -> B greater ->

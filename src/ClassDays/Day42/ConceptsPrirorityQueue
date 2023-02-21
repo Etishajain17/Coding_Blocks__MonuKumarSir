@@ -1,0 +1,107 @@
+Heap --> Complete Binary Tree and a property associated with every node .
+Same concept in prirority queue slightly diff from queue as insertion and deletion based on property associated with the node.
+Based on property
+     /       \
+Min Heap    Max Heap
+
+     x
+   /   \
+  y     z
+
+rank etc y>x<z value wise  x is high priority on less value   --> min heap
+marks etc y<x>z value wise  x is high priority on high value   --> max heap
+
+CBT --> If no of levels are l then upto l-1 every node have two children and at last level filled from left to right
+
+         15
+       /    \
+     18      20
+    /  \    /  \
+   13  27  23   21      --> CBT but not heap
+  /  \
+ 15  16
+
+         15
+       /    \
+     18      20
+    /  \    /  \
+   19  27  23   21      --> CBT --> min heap
+  /  \
+ 36  120
+
+
+Min heap --> entire data ka minimum at root
+Max heap --> entire data ka maximum at root
+
+Why heap??---
+             |  Sorted array  | Unsorted array |  Heap
+ add element |     O(n)       |       O(1)     |  log n
+ rem element |     O(n)       |       O(n)     |  log n
+ get min     |     O(1)       |       O(n)     |  O(1)
+
+
+          15
+        /    \
+      18      20
+     /  \    /  \
+    19  27  23   21
+   /  \
+  36  120
+
+ArrayList --> not synchronized and Vector --> synchronized and we donot need synchronization in coding
+we donot insert value at index 1 before inserting at 0 so arraylist we will use it
+
+index of parent -> i
+index of left child -> 2*i+1
+index of right child ->2*i+2
+pi=(ci-1)/2
+
+{10,20,30,5,7,3}
+
+          10                    [10]
+        /    \
+      20      30                [10,20,30]
+     /
+    5                           [10,20,30,5]
+
+
+          10                    [10]                      ci=3  upheapify
+        /    \
+       5     30                 [10,5,30]                 pi=1
+     /
+    20                          [10,5,30,20]
+
+
+          5                     [5]                       ci=1
+        /    \
+      10     30                 [5,10,30]                 pi=0
+     /
+    20                          [5,10,30,20]
+
+
+
+          5                     [5]
+        /    \
+      10     30                 [5,10,30]
+     /  \
+    20  7                       [5,10,30,20,7]
+
+          5                      [5]                       ci=4
+        /    \
+      7      30                  [5,7,30]                  pi=1
+     /  \
+    20  10                       [5,7,30,20,10]
+
+
+...........
+...........
+
+          3                      [3]
+        /    \
+      7      5                   [3,7,5]
+     /  \   /
+    20  10 30                    [3,7,5,20,10,30]
+
+    2^h =n
+    h=log n
+

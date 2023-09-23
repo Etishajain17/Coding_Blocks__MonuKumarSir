@@ -1,0 +1,9 @@
+BFS gives shortest path based on edges
+
+Single Source Shortest Path
+
+- Dijkstra (BFS + diff ds) -- greedy algo. ,  edges weight can't be -ve otherwise fail., we can find cycle.
+        Use Min heap --> priority queue
+        execute that vertex which is having less cost now.
+
+- Bellman ford

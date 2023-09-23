@@ -1,0 +1,14 @@
+Those who cannot remember the past are condemned to repeat it.
+                                        - DP
+
+- Problem Overlapping eq. fibonacci but not merge sort
+- Optimal Substructure eq.
+
+Approaches
+- Top Down (Memoization)
+- Bottom up (Iterative/tabulation)
+
+One time calculated then added so every element just frame created one time and so complexity brcomes linear from exponential
+varying things = size of array to take to save the data
+
+Base case khud fill krdo recurrence relation bnake

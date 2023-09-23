@@ -1,0 +1,52 @@
+Spanning Tree
+- Subset of Graph in which some edges are removed
+- No cycle and not disconnected
+- Alag banado agr disconnected h single nhi bnaega
+- All vertices covered with minimum possible no of edges.
+- Multiple answer i.e. spanning tree possible
+- n vertices --> n-1 edges all vertex covered
+- removing one edge will make it disconnected -> spanning tree minimally connected
+- adding one edge will create loop -> spanning tree is maximally acyclic
+
+Use
+- hundred computers connected mimimally wit minimum edges
+
+Minimum Spanning Tree
+- spanning tree with minimum cost/weight
+
+Algorithm
+- Kruskal's Algo --> greedy
+        - minimum cost wala edge leke but cycle create nhi hona chahiye
+        - set bnao usme agr edge add ho too unka union krdo
+        - disjoint set
+        - union
+- Prim's Algo --> greedy
+
+Greedy --> current time best
+
+Disjoint Set
+Set andr
+- Vertex konsa h , parent kon h , height kya h i.e. rank
+Union
+- Union by rank - Path Compression
+- also detect cycle
+
+Union by rank
+- parent -> representative ie. re
+- rank -> height
+- jiski rank km uske parent ko change krdo
+- atleast eight se height - > 3 height
+- atleast four se height -> 2 height
+- atmax infinite atleast 2 --> 1 height
+
+Union by path compression
+- parent se direct attach krdo kiuki re se mtlbh h na ki structure se
+- assume phele jaisa structure
+- kuch time ke baad O(1)
+- average time krdo O(1)
+
+DSU ==>  Data Structure
+- Non-optimized technique
+- All union, create , find methods should be O(1)
+
+Spanning tree count --> kirshoff's

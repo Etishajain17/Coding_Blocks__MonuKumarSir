@@ -1,0 +1,45 @@
+----Graph----
+
+Facebook's Friend Suggestion
+Google Map  --> Shortest Path
+Routing Table Router
+
+- finite set of edge and vertex
+- data - node/vertex , connection - edge
+- Undirected and Directed Graph
+   ||               ||
+   Weighted , Unweighted
+- graph neighbour relation
+- how to store a graph
+    adjacency matrix -- space wastage no edge then also allocating so don't use
+                     -- O(1) to check any direct edge present or not
+    adjacency list  -- space not wastage
+                    -- O(n) to check any direct edge present or not
+    HashMap       --
+
+
+- all vertex should be connected to every other vertex
+    n*(n-1)/2
+- BFS / DFS
+- BFT / DFT
+
+BFS
+- 1.remove
+- 2.Ignore
+- 3.visited (becoz we can go back)
+- 4.ques acc. self work
+- 5.neighbour add
+
+cycle detection through DFS or BFS.
+
+disconnected graph having more than one component i.e. through one point we can't traverse complete graph through BFS-- so BFT
+number of disconnected components through BFT eg. Number of islands
+
+All tree are graph but all graph are not tree
+All graph are tree when cycle is not there and one component is present only.
+
+Acyclic graph --> Bipartite
+Cyclic graph --> even cycle --> bipartite
+             --> odd cycle --> not bipartite
+
+stream point at diff distance if odd cycle

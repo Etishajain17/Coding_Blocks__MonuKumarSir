@@ -1,0 +1,4 @@
+Hashmap Implementation
+    key-value pairs
+
+add value,get value,remove ,check any entry present or not  --> O(1)
